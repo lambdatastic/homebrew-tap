@@ -6,8 +6,8 @@ class TfSops < Formula
 
   desc "A CLI tool for supporting SOPS encryption of Terraform/OpenTofu plan and state files"
   homepage "https://github.com/lambdatastic/tf-sops"
-  url "https://github.com/lambdatastic/tf-sops/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "de2f944a4f5b97af48d15045f86e8a4b1d6ab6b60c56562f34b2222574b49045"
+  url "https://github.com/lambdatastic/tf-sops/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "4f5a3a1565c0e932b7d5c8cb91c58b414eea4b84d4ec19001fe79ce35d717229"
   license "MPL-2.0"
 
   depends_on "python@3.15"
