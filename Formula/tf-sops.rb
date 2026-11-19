@@ -1,0 +1,30 @@
+# Documentation: https://docs.brew.sh/Formula-Cookbook
+#                https://docs.brew.sh/rubydoc/Formula
+# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+class TfSops < Formula
+  include Language::Python::Virtualenv
+
+  desc "A CLI tool for supporting SOPS encryption of Terraform/OpenTofu plan and state files"
+  homepage "https://github.com/lambdatastic/tf-sops"
+  url "https://github.com/lambdatastic/tf-sops/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "de2f944a4f5b97af48d15045f86e8a4b1d6ab6b60c56562f34b2222574b49045"
+  license "MPL-2.0"
+
+  depends_on "python@3.15"
+
+  def install
+    virtualenv_install_with_resources
+  end
+
+  test do
+    # `test do` will create, run in and delete a temporary directory.
+    #
+    # This test will fail and we won't accept that! For Homebrew/homebrew-core
+    # this will need to be a test that verifies the functionality of the
+    # software. Run the test with `brew test tf-sops`.
+    #
+    # The installed folder is not in the path, so use the entire path to any
+    # executables being tested: `system bin/"program", "do", "something"`.
+    system "false"
+  end
+end
