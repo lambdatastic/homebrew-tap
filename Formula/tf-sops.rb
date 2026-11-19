@@ -1,10 +1,7 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://docs.brew.sh/rubydoc/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class TfSops < Formula
   include Language::Python::Virtualenv
 
-  desc "A CLI tool for supporting SOPS encryption of Terraform/OpenTofu plan and state files"
+  desc "CLI tool for SOPS encryption of Terraform/OpenTofu plan and state files"
   homepage "https://github.com/lambdatastic/tf-sops"
   url "https://github.com/lambdatastic/tf-sops/archive/refs/tags/v0.1.1.tar.gz"
   sha256 "4f5a3a1565c0e932b7d5c8cb91c58b414eea4b84d4ec19001fe79ce35d717229"
@@ -25,6 +22,6 @@ class TfSops < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system bin/"program", "do", "something"`.
-    system "false"
+    system bin/"tf-sops", "--help"
   end
 end
